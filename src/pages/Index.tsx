@@ -26,6 +26,30 @@ const providers = [
     website: "https://example.com",
     imageUrl: "https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&q=80",
   },
+  {
+    name: "Al-Madinah Travels",
+    description: "Specialized in VIP and luxury Umrah experiences with private transportation.",
+    registrationNumber: "UM567890",
+    contactNumber: "+60 3-9876 5432",
+    website: "https://example.com",
+    imageUrl: "https://images.unsplash.com/photo-1542442828-287217bfb87f?auto=format&fit=crop&q=80",
+  },
+  {
+    name: "Taqwa Islamic Tours",
+    description: "Budget-friendly packages with experienced religious guides.",
+    registrationNumber: "UM234567",
+    contactNumber: "+60 3-3456 7890",
+    website: "https://example.com",
+    imageUrl: "https://images.unsplash.com/photo-1581012771300-20e80c6c4f10?auto=format&fit=crop&q=80",
+  },
+  {
+    name: "Zamzam Expeditions",
+    description: "All-inclusive Umrah packages with daily religious lectures.",
+    registrationNumber: "UM890123",
+    contactNumber: "+60 3-7890 1234",
+    website: "https://example.com",
+    imageUrl: "https://images.unsplash.com/photo-1570537176120-7c71e8f2c44e?auto=format&fit=crop&q=80",
+  }
 ];
 
 const Index = () => {
