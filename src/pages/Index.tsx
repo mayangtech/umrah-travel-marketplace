@@ -1,7 +1,5 @@
-import { AuthCheck } from "@/components/auth/AuthCheck";
 import { ProviderCard } from "@/components/providers/ProviderCard";
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/useAuth";
+import { MainNav } from "@/components/nav/MainNav";
 
 const providers = [
   {
@@ -31,32 +29,24 @@ const providers = [
 ];
 
 const Index = () => {
-  const { isAuthenticated, logout } = useAuth();
-
   return (
-    <AuthCheck>
-      <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-        <header className="border-b">
-          <div className="container mx-auto flex items-center justify-between py-4">
-            <h1 className="text-2xl font-bold text-primary">Umrah Marketplace</h1>
-            {isAuthenticated && (
-              <Button variant="outline" onClick={logout}>
-                Logout
-              </Button>
-            )}
-          </div>
-        </header>
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <MainNav />
+      <main className="container mx-auto px-4 py-8">
+        <section className="mb-12 text-center">
+          <h1 className="mb-4 text-4xl font-bold text-gray-900">Choose Your Umrah Provider</h1>
+          <p className="mx-auto max-w-2xl text-lg text-gray-600">
+            Select from our trusted Umrah travel providers offering comprehensive packages for your spiritual journey.
+          </p>
+        </section>
 
-        <main className="container mx-auto py-8">
-          <h2 className="mb-8 text-3xl font-bold">Choose Your Umrah Provider</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {providers.map((provider) => (
-              <ProviderCard key={provider.registrationNumber} {...provider} />
-            ))}
-          </div>
-        </main>
-      </div>
-    </AuthCheck>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {providers.map((provider) => (
+            <ProviderCard key={provider.registrationNumber} {...provider} />
+          ))}
+        </div>
+      </main>
+    </div>
   );
 };
 
